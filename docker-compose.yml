@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    container_name: ai-lab
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      interval: 30s
+      timeout: 5s
+      retries: 2
+      start_period: 5s
+    develop:
+      watch:
+        - action: sync
+          path: ./app
+          target: /app/app
