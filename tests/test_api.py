@@ -10,7 +10,7 @@ def test_health():
     response = client.get("/health")
 
     assert response.status_code == 200
-    assert response.json()["status"] == "ok"
+    assert response.json()["status"] == "running"
 
 
 def test_ask_uses_mocked_ai_response(monkeypatch):

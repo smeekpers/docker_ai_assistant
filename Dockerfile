@@ -22,7 +22,8 @@ COPY --chown=appuser:appuser . .
 
 ENV PATH=/home/appuser/.local/bin:$PATH \
     PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/app
 
 USER appuser
 
