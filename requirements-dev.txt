@@ -5,3 +5,4 @@ flake8
 pre-commit
 httpx
 pytest-mock
+zensical
