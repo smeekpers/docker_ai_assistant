@@ -1,13 +1,8 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
 
 from app.ai_client import ask_ai
 
 app = FastAPI()
-
-
-class AskRequest(BaseModel):
-    question: str
 
 
 @app.get("/")
@@ -20,12 +15,11 @@ def health():
     return {"status": "running"}
 
 
-@app.post("/ask")
-def ask(request: AskRequest):
-
-    answer = ask_ai(request.question)
+@app.get("/ask")
+def ask(question: str):
+    answer = ask_ai(question)
 
     return {
-        "question": request.question,
+        "question": question,
         "answer": answer,
     }
