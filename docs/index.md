@@ -1,8 +1,8 @@
-# AI Document Assistant
+# Docker AI Assistant
 
-FastAPI application using OpenAI.
+Documentation for the Docker AI Assistant project.
 
-## Sections
+## Contents
 
 - Setup
 - Testing
