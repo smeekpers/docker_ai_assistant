@@ -7,8 +7,22 @@ theme:
 
 nav:
   - Home: index.md
-  - Architecture: architecture.md
-  - Setup: setup.md
-  - Testing: testing.md
-  - Deployment: deployment.md
-  - Troubleshooting: troubleshooting.md
+
+  - Architecture:
+      - Overview: architecture.md
+
+  - Setup:
+      - Overview: setup.md
+      - Docker Rebuild Run Book: setup/docker_rebuild_run_book.md
+      - Zensical Rebuild and Start: setup/zensical_rebuild_start.md
+
+  - Testing:
+      - Testing Guide: testing.md
+
+  - Deployment:
+      - Deployment Guide: deployment.md
+
+  - Troubleshooting:
+      - Main Troubleshooting Guide: troubleshooting.md
+      - Zensical 404 Error: troubleshooting/zensical_404_error.md
+      - Dev Container Errors: troubleshooting/dev_container_errors.md
