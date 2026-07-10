@@ -7,13 +7,8 @@ theme:
 
 nav:
   - Home: index.md
-
-  - Setup:
-      - Docker: setup/docker.md
-      - GitHub: setup/github.md
-      - Deployment: setup/deployment.md
-
-  - Troubleshooting:
-      - Docker Errors: troubleshooting/docker-errors.md
-      - Git Errors: troubleshooting/git-errors.md
-      - FastAPI Errors: troubleshooting/fastapi-errors.md
+  - Architecture: architecture.md
+  - Setup: setup.md
+  - Testing: testing.md
+  - Deployment: deployment.md
+  - Troubleshooting: troubleshooting.md
