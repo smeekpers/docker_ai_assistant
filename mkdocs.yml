@@ -7,10 +7,8 @@ theme:
 
 nav:
   - Home: index.md
-
   - Architecture:
       - Overview: architecture.md
-
   - Setup:
       - Deployment setup.md
       - Docker Rebuild Run Book: setup/docker_rebuild_run_book.md
