@@ -1,5 +1,5 @@
 site_name: Docker AI Assistant
-site_url: https://github.com/smeekpers/docker_ai_assistant
+site_url: https://smeekpers.github.io/docker_ai_assistant/
 repo_url: https://github.com/smeekpers/docker_ai_assistant
 repo_name: docker_ai_assistant
 
@@ -28,20 +28,22 @@ nav:
       - Overview: architecture.md
 
   - Setup:
-      - Deployment: setup/deployment_setup.md
+      - Deployment: setup/deployment.md
       - Docker:
           - Rebuild Run Book: setup/docker_rebuild_run_book.md
-          - Setup Scenarios: setup/docker_setup_scenarios.md
-      - Github: setup/github.md
-      - Zensical Rebuild and Start: setup/zensical_rebuild_start.md
+          - Docker Setup: setup/docker.md
+      - GitHub: setup/github.md
+      - Zensical Rebuild and Start: setup/zensical_build.md
 
   - Testing:
       - Testing Guide: testing.md
 
-  - Deployment:
-      - Deployment Guide: deployment.md
-
   - Troubleshooting:
-      - Main Troubleshooting Guide: troubleshooting.md
-      - Zensical 404 Error: troubleshooting/zensical_404_error.md
-      - Dev Container Errors: troubleshooting/dev_container_errors.md
+      - Zensical 404 Error: troubleshooting/Zensical 404 error.md
+      - Docker Errors: troubleshooting/docker-errors.md
+      - FastAPI Errors: troubleshooting/fastapi-errors.md
+      - Git Errors: troubleshooting/git-errors.md
+      - Pre-commit Errors:
+          - Black no files to check: troubleshooting/Errors/black_no files_to_check.md
+          - Stashed changes conflicted with hook: troubleshooting/Errors/Stashed changes conflicted with hook.md
+          - Unstaged Files Detected: troubleshooting/Errors/Unstaged Files Detected.md

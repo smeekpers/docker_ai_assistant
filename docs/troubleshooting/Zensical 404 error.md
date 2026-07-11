@@ -43,11 +43,22 @@ theme:
 
 nav:
   - Home: index.md
-  - Architecture: architecture.md
-  - Setup: setup.md
-  - Testing: testing.md
-  - Deployment: deployment.md
-  - Troubleshooting: troubleshooting.md
+  - Architecture:
+      - Overview: architecture.md
+  - Setup:
+      - Deployment: setup/deployment.md
+      - Docker:
+          - Rebuild Run Book: setup/docker_rebuild_run_book.md
+          - Docker Setup: setup/docker.md
+      - GitHub: setup/github.md
+      - Zensical Rebuild and Start: setup/zensical_build.md
+  - Testing:
+      - Testing Guide: testing.md
+  - Troubleshooting:
+      - Zensical 404 Error: troubleshooting/Zensical 404 error.md
+      - Docker Errors: troubleshooting/docker-errors.md
+      - FastAPI Errors: troubleshooting/fastapi-errors.md
+      - Git Errors: troubleshooting/git-errors.md
 ```
 
 ---
@@ -63,10 +74,16 @@ The navigation references:
 ```yaml
 index.md
 architecture.md
-setup.md
+setup/deployment.md
+setup/docker.md
+setup/docker_rebuild_run_book.md
+setup/github.md
+setup/zensical_build.md
 testing.md
-deployment.md
-troubleshooting.md
+troubleshooting/Zensical 404 error.md
+troubleshooting/docker-errors.md
+troubleshooting/fastapi-errors.md
+troubleshooting/git-errors.md
 ```
 
 If any file is missing from `docs/`, the corresponding page cannot be generated.
@@ -88,13 +105,13 @@ If the filename in `mkdocs.yml` does not exactly match the filename in `docs/`, 
 Example:
 
 ```yaml
-- Testing: testing.md
+- Zensical Rebuild and Start: setup/zensical_build.md
 ```
 
 but the file is:
 
 ```text
-docs/tests.md
+docs/setup/zensical_rebuild_start.md
 ```
 
 This will generate a problem.
@@ -124,10 +141,16 @@ Expected:
 ```text
 docs/index.md
 docs/architecture.md
-docs/setup.md
+docs/setup/deployment.md
+docs/setup/docker.md
+docs/setup/docker_rebuild_run_book.md
+docs/setup/github.md
+docs/setup/zensical_build.md
 docs/testing.md
-docs/deployment.md
-docs/troubleshooting.md
+docs/troubleshooting/Zensical 404 error.md
+docs/troubleshooting/docker-errors.md
+docs/troubleshooting/fastapi-errors.md
+docs/troubleshooting/git-errors.md
 ```
 
 ---
@@ -243,7 +266,8 @@ sitemap.xml
 ## Step 5 – Restart Server
 
 ```bash
-zensical serve
+source .venv/bin/activate
+./scripts/serve_zensical.sh
 ```
 
 Expected:

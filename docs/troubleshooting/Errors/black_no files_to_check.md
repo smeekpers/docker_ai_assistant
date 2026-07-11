@@ -122,6 +122,20 @@ Example successful output:
 black........................................................Passed
 ```
 
+Or use the repo helper:
+
+```bash
+./scripts/resolve_precommit.sh --all-files
+```
+
+The helper can also explain whether Python files are unstaged, stage them before rerunning Python hooks, or run the full pre-commit suite:
+
+```bash
+./scripts/resolve_precommit.sh
+./scripts/resolve_precommit.sh --stage-python
+./scripts/resolve_precommit.sh --all-hooks
+```
+
 ---
 
 ## Verify All Hooks

@@ -238,6 +238,28 @@ git stash pop
 
 ---
 
+## Repo Helper
+
+The repository includes a helper script for this warning:
+
+```bash
+./scripts/resolve_precommit.sh
+```
+
+Behavior:
+
+- If unstaged tracked files do not overlap with staged files, the script temporarily stashes them, runs pre-commit on the staged set, and restores the unstaged work.
+- If a file has both staged and unstaged changes, the script stops and tells you to either stage all current changes or split the file manually.
+
+Useful variants:
+
+```bash
+./scripts/resolve_precommit.sh --stage-all
+./scripts/resolve_precommit.sh --all-files
+```
+
+---
+
 ## Docker AI Assistant Example
 
 Project structure:

@@ -92,6 +92,15 @@ Expected:
 (no output)
 ```
 
+Shortcut:
+
+```bash
+source .venv/bin/activate
+./scripts/serve_zensical.sh
+```
+
+The helper script stops any listener already bound to port 8000 and then starts `zensical serve`.
+
 ---
 
 ## Step 3 – Remove Existing Generated Site
@@ -184,7 +193,7 @@ Expected:
 Serve the site locally for preview.
 
 ```bash
-zensical serve
+./scripts/serve_zensical.sh
 ```
 
 Open the browser at:
@@ -193,7 +202,7 @@ Open the browser at:
 http://127.0.0.1:8000
 ```
 
-If port 8000 is still busy, stop the process and retry.
+If you want to run the underlying command directly instead, use `zensical serve` after confirming that port 8000 is free.
 
 ---
 
