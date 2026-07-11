@@ -1,18 +1,37 @@
 site_name: Docker AI Assistant
+site_url: https://github.com/smeekpers/docker_ai_assistant
+repo_url: https://github.com/smeekpers/docker_ai_assistant
+repo_name: docker_ai_assistant
 
 docs_dir: docs
 
 theme:
   name: material
+  palette:
+    scheme: slate
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - toc
+
+copyright: Copyright &copy; 2026 Docker AI Assistant Contributors
 
 nav:
   - Home: index.md
+
   - Architecture:
       - Overview: architecture.md
+
   - Setup:
-      - Deployment setup.md
-      - Docker Rebuild Run Book: setup/docker_rebuild_run_book.md
-      - Docker Setup Scenarios: setup/docker_setup_scenarios.md
+      - Deployment: setup/deployment_setup.md
+      - Docker:
+          - Rebuild Run Book: setup/docker_rebuild_run_book.md
+          - Setup Scenarios: setup/docker_setup_scenarios.md
       - Github: setup/github.md
       - Zensical Rebuild and Start: setup/zensical_rebuild_start.md
 
