@@ -125,15 +125,14 @@ black........................................................Passed
 Or use the repo helper:
 
 ```bash
-./scripts/resolve_precommit.sh --all-files
+./scripts/resolve_black_skipped.sh
 ```
 
-The helper can also explain whether Python files are unstaged, stage them before rerunning Python hooks, or run the full pre-commit suite:
+The helper runs Black on staged Python files when they exist and otherwise falls back to all tracked Python files so the skip is actually resolved. If you have modified Python files that are not staged yet, you can stage them first with:
 
 ```bash
-./scripts/resolve_precommit.sh
-./scripts/resolve_precommit.sh --stage-python
-./scripts/resolve_precommit.sh --all-hooks
+./scripts/resolve_black_skipped.sh --stage-python
+./scripts/resolve_black_skipped.sh --all-files
 ```
 
 ---
@@ -205,7 +204,7 @@ git status
 ### Run Black manually
 
 ```bash
-pre-commit run black --all-files
+./scripts/resolve_black_skipped.sh
 ```
 
 ### Run all hooks
