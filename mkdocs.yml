@@ -12,8 +12,10 @@ nav:
       - Overview: architecture.md
 
   - Setup:
-      - Overview: setup.md
+      - Deployment setup.md
       - Docker Rebuild Run Book: setup/docker_rebuild_run_book.md
+      - Docker Setup Scenarios: setup/docker_setup_scenarios.md
+      - Github: setup/github.md
       - Zensical Rebuild and Start: setup/zensical_rebuild_start.md
 
   - Testing:
